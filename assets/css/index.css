@@ -96,7 +96,7 @@ input[type=checkbox] {
 }
 
 #helloDialog {
-	width: 350px;
+	width: 750px;
 	background-color:#000c;
 	border: solid 1px #0;
 	border-top: none;
@@ -111,21 +111,15 @@ input[type=checkbox] {
 	text-shadow: 1px 1px 10px black, -1px -1px 10px red;
 
 }
+#helloDialog2 {
+	width: 350px;
+	float:right;
+}
 
 #nickDialog {
 	color: dimgrey;
 	width: 350px;
-	background: none;
-	border-top: none;
-	border-bottom: none;
-	margin: 10px auto;
-	border-radius: 30px;
-	padding: 5px 15px 5px 15px;
-	position: absolute;
-	top: 50%;
-	left: calc(20% - 20px);
-	transform: translate(-50%, -50%);
-
+	float: left;
 }
 
 #cojarchyChat {
