@@ -1474,6 +1474,9 @@ exampleNick2
                 Logger.warn('Got no color');
                 return;
             }
+            if (this.skin != undefined && this.skin.charAt(0) === `$`) {
+                this.color = new Color(255, 255, 255);
+            }
             this.color = value;
             this.sColor = value.darker();
         }
