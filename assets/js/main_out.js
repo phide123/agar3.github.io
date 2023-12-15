@@ -1474,10 +1474,11 @@ exampleNick2
                 Logger.warn('Got no color');
                 return;
             }
+
+            this.color = value;
             if (this.skin != undefined && this.skin.charAt(0) === `$`) {
                 this.color = new Color(255, 255, 255);
             }
-            this.color = value;
             this.sColor = value.darker();
         }
         draw(ctx) {
