@@ -11,95 +11,54 @@
         return document.getElementById(id);
     }
     
-    function isEven(value) {
-        return (value%2 == 0);
+function isEven(value) {
+    return (value%2 == 0);
+}
+
+function cutter(str) {
+    var size = str.length;
+    var res = str;
+    if (isEven(size)) {
+        let firstHalf = str.slice(0, size/2);
+        let secondHalf = str.slice(size/2, size)
+        res = secondHalf + firstHalf
     }
-
-
-    function cutter(str) {
-        var size = str.length;
-        var res = str;
-        if (isEven(size)) {
-            let firstHalf = str.slice(0, size/2);
-            let secondHalf = str.slice(size/2, size)
-            res = secondHalf + firstHalf
-        }
-        if (res.length < 16) {
-            let symbol = `o`
-            return res + symbol.repeat(16 - res.length)
-        }
-        else {
-            let half = size/2
-            return res.slice(half-8, half+8);
-        }
-        return str;
+    if (res.length >= 16) {
+        let half = size/2
+        return res.slice(half-8, half+8);
     }
+    return res;
+}
 
-/*
-    function showBorder(ctx) {
-        let visibleBorder = String.fromCharCode(36);
-        if (ctx.startsWith(String.fromCharCode(36))
-        {
-            for (var i = 1; i < skin.length; i++)
-            {
-                var chr = skin.charAt(i);
-                var dchr = ``;
-                
-                if ('abcde'.includes(chr.toLowerCase()))
-                {
-                    dchr = chr.toUpperCase();
-                }
-                    
-                else
-                {
-                    var code = chr.charCodeAt(0) - 97;
-                    if (isEven(code))
-                    {
-                        dchr = String.fromCharCode(97 + code+1) + String.fromCharCode(97 + code)
-                    }
-                    else dchr = String.fromCharCode(97 + code-1)
-                }
-                visibleBorder = visibleBorder + dchr
-                
-            }
-        if (isEven(visibleBorder))
-        {
-            visibleBorder = cutter(visibleBorder);
-        }
-        return visibleBorder
-        }
-    }
-*/
-
-    function hideBorder(ctx) {
-        var hiddenBorder = ``;
-        const symbol = String.fromCharCode(36)
-        
-        if (ctx.startsWith(symbol)) {
-            for (var i = 1; i < ctx.length; i++) {
-                let chr = ctx.charAt(i);
-                let cChr = ``;
-                let code = chr.charCodeAt(0) - 97;
-                
-                if ('abcdez'.includes(chr.toLowerCase())) {
-                    cChr = code;
-                }
-                    
-                else {
-                    if (isEven(code)) {
-                        const strA = String.fromCharCode(97 + code -4)
-                        const strB = String.fromCharCode(97 + code-1);
-                        cChr = strA + strB;
-                    }
-                    else cChr = String.fromCharCode(97 + code+1);
-                }
-                hiddenBorder = hiddenBorder + cChr;
-            }
+function hideBorder(ctx) {
+    var hiddenBorder = ``;
+    const symbol = String.fromCharCode(36)
+    
+    if (ctx.startsWith(symbol)) {
+        for (var i = 1; i < ctx.length; i++) {
+            let chr = ctx.charAt(i);
+            let cChr = ``;
+            let code = chr.toLowerCase().charCodeAt(0) - 97;
             
-        hiddenBorder = cutter(hiddenBorder);
-        return String.fromCharCode(36) + hiddenBorder;
+            if ('abcdexyz'.includes(chr.toLowerCase())) {
+                cChr = code;
+            }
+                
+            else {
+                if (isEven(code)) {
+                    const strA = String.fromCharCode(97 + code -2).toUpperCase();
+                    const strB = String.fromCharCode(97 + code-1);
+                    cChr = strA + strB;
+                }
+                else cChr = String.fromCharCode(97 + code+1);
+            }
+            hiddenBorder = hiddenBorder + cChr;
         }
+        
+    hiddenBorder = cutter(hiddenBorder);
+    return String.fromCharCode(36) + hiddenBorder;
     }
+}
 
     class Sound {
         constructor(src, volume, maximum) {
