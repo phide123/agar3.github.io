@@ -1810,6 +1810,8 @@ exampleNick2
         document.body.addEventListener('mouseup', (e)=>{if(e.button===_button){clearInterval(_ID);_ID=0}});
 
         byId('canvas').addEventListener('click', doubleSplit);
+        byId('bgColor').addEventListener('change', sendResponse(settings.nick, settings.nickList, '🎨🔁'));
+
         
         byId('nickList').addEventListener('keyup', () => {
             const nickList = document.getElementById('nickList').value;
