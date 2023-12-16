@@ -684,9 +684,9 @@ function hideBorder(ctx) {
 `exampleNick
 exampleNick2
 ...`,
-        cellMin: 7,
-        cellMax: 52,
-        virusNum: 34,
+        cellMin: '7',
+        cellMax: '52',
+        virusNum: '34',
         showSkins: true,
         showNames: true,
         darkTheme: true,
@@ -1831,9 +1831,9 @@ exampleNick2
         
         byId('play-btn').addEventListener('click', () => {
             settings.bgColor = bgColorInput.value
-            settings.virusNum = parseInt(virusNumInput.value)
-            settings.cellMin = parseInt(cellMinInput.value)
-            settings.cellMax = parseInt(cellMaxInput.value)
+            settings.virusNum = virusNumInput.value
+            settings.cellMin = cellMinInput.value
+            settings.cellMax = cellMaxInput.value
             
             const accessCode = document.getElementById('accessCode').value;
 
