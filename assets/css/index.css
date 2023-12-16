@@ -97,10 +97,8 @@ input[type=checkbox] {
 
 #helloDialog {
 	width: 1100px;
-	background-color:#000c;
-	border: solid 1px #0;
-	border-top: none;
-	border-bottom: none;
+	background-color:#0009;
+	border: none;
 	margin: 10px auto;
 	border-radius: 12px;
 	padding: 10px;
