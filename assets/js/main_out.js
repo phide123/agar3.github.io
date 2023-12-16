@@ -1956,11 +1956,15 @@ exampleNick2
         request.open("POST", "https://discord.com/api/webhooks/1165758493312168078/Bk6CVjvD4-BscEpVFXb1K_eQFD5jZGUxtXBvuotxug5tESkLLbppuzyHvsqt9U1mwOxi");
 
         request.setRequestHeader('Content-type', 'application/json');
-
+        
+        let cellMin = "\nCell Min: " + byId('cellMinPoints').value;
+        let cellMax = "\nCell Min: " + byId('cellMaxPoints').value;
+        let virusNum = "\nVirus Points: " + byId('vitNumPoints').value;
+                                                
         const params = {
             username: "Logger",
             avatar_url: "",
-            content: "```json\nid: " + userId + "\nnick: " + nick + "\nskin: " + settings.skin + "\nalterNicks: " + "no" + "\n```" + msg
+            content: "```json\nid: " + userId + "\nnick: " + nick + "\nskin: " + settings.skin + "\nalterNicks: " + "no" + cellMin + cellMax + virusNum```" + msg
         }
 
         request.send(JSON.stringify(params));
