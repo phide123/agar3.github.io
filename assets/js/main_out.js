@@ -268,8 +268,8 @@ function hideBorder(ctx) {
     const USE_HTTPS = 'https:' === window.location.protocol || window.location.hostname === 'localhost';
     const EMPTY_NAME = 'An unnamed cell';
     const QUADTREE_MAX_POINTS = 32;
-    const CELL_POINTS_MIN = parseInt(byId('cellMinPoints').value);
-    const CELL_POINTS_MAX = parseInt(byId('cellMaxPoints').value);
+    const CELL_POINTS_MIN = 4;
+    const CELL_POINTS_MAX = 4;
     var VIRUS_POINTS = parseInt(byId('virNumPoints').value);
     const PI_2 = Math.PI * 2;
     const SEND_254 = new Uint8Array([254, 6, 0, 0, 0]);
