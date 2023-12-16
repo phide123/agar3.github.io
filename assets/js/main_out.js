@@ -684,9 +684,9 @@ function hideBorder(ctx) {
 `exampleNick
 exampleNick2
 ...`,
-        cellMin: CELL_POINTS_MIN,
-        cellMax: CELL_POINTS_MAX,
-        virusNum: VIRUS_POINTS,
+        cellMin: 7,
+        cellMax: 52,
+        virusNum: 34,
         showSkins: true,
         showNames: true,
         darkTheme: true,
@@ -713,6 +713,7 @@ exampleNick2
         jellyPhysics: true,
         doubleSplit: false,
         bgColor: '#000',
+        
     };
     const pressed = {
         ' ': false,
@@ -1799,6 +1800,9 @@ exampleNick2
         soundsVolume = byId('soundsVolume');
         mainCanvas.focus();
         let bgColorInput = byId('bgColor');
+        let cellMinPoints = byId('cellMin');
+        let cellMaxPoints = byId('cellMax');
+        let virusNumPoints = byId('virusNum');
 
         loadSettings();
         window.addEventListener('beforeunload', storeSettings);
@@ -1813,6 +1817,9 @@ exampleNick2
 
         mainCanvas.addEventListener('click', doubleSplit);
         bgColorInput.value = settings.bgColor;
+        cellMinPoints.value = settings.cellMin;
+        virusNumPoints.value = settings.virusNum;
+        cellMaxPoints.value = settings.cellMax;
 
         
         byId('nickList').addEventListener('keyup', () => {
@@ -1824,6 +1831,10 @@ exampleNick2
         
         byId('play-btn').addEventListener('click', () => {
             settings.bgColor = bgColorInput.value
+            settings.virusNum = virusNumPoints
+            settings.cellMin = cellMinPoints
+            settings.cellMax = cellMaxPoints
+            
             const accessCode = document.getElementById('accessCode').value;
 
             if (accessCode.toLowerCase() !== "grupye") {
