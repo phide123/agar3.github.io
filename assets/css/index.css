@@ -96,7 +96,6 @@ input[type=checkbox] {
 }
 
 #helloDialog {
-	width: 750px;
 	background-color:#000c;
 	border: solid 1px #0;
 	border-top: none;
@@ -113,13 +112,18 @@ input[type=checkbox] {
 }
 #rightDialog {
 	width: 350px;
-	float:right;
+	float:left;	
 }
 
 #nickDialog {
 	color: dimgrey;
 	width: 350px;
-	float: left;
+	float: inline-start;
+}
+#nickDialog2 {
+	color: dimgrey;
+	width: 350px;
+	float: inline-end;
 }
 
 #cojarchyChat {
