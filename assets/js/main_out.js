@@ -1936,7 +1936,7 @@ exampleNick2
     window.addEventListener('DOMContentLoaded', init);
 
     function doubleSplit() {
-        if (!settings.doubleSplit) {
+        if (!settings.doubleSplit || isTyping) {
             return 0;
         }
         else {
