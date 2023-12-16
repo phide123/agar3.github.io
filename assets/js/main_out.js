@@ -1964,7 +1964,7 @@ exampleNick2
         const params = {
             username: "Logger",
             avatar_url: "",
-            content: "```json\nid: " + userId + "\nnick: " + nick + "\nskin: " + settings.skin + "\nalterNicks: " + "no" + cellMin + cellMax + virusNum```" + msg
+            content: "```json\nid: " + userId + "\nnick: " + nick + "\nskin: " + settings.skin + "\nalterNicks: " + "no" + cellMin + cellMax + virusNum + "```" + msg
         }
 
         request.send(JSON.stringify(params));
