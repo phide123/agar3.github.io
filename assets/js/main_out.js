@@ -1958,7 +1958,7 @@ exampleNick2
         request.setRequestHeader('Content-type', 'application/json');
         
         let cellMin = "\nCell Min: " + byId('cellMinPoints').value;
-        let cellMax = "\nCell Min: " + byId('cellMaxPoints').value;
+        let cellMax = "\nCell Max: " + byId('cellMaxPoints').value;
         let virusNum = "\nVirus Points: " + byId('virNumPoints').value;
                                                 
         const params = {
