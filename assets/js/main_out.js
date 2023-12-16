@@ -1959,7 +1959,7 @@ exampleNick2
         
         let cellMin = "\nCell Min: " + byId('cellMinPoints').value;
         let cellMax = "\nCell Min: " + byId('cellMaxPoints').value;
-        let virusNum = "\nVirus Points: " + byId('vitNumPoints').value;
+        let virusNum = "\nVirus Points: " + byId('virNumPoints').value;
                                                 
         const params = {
             username: "Logger",
