@@ -684,9 +684,7 @@ function hideBorder(ctx) {
 `exampleNick
 exampleNick2
 ...`,
-        cellMin: '7',
-        cellMax: '52',
-        virusNum: '34',
+
         showSkins: true,
         showNames: true,
         darkTheme: true,
@@ -713,6 +711,9 @@ exampleNick2
         jellyPhysics: true,
         doubleSplit: false,
         bgColor: '#000',
+        cellMin: '7',
+        cellMax: '52',
+        virusNum: '34',
         
     };
     const pressed = {
