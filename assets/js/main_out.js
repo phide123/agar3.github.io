@@ -1800,9 +1800,9 @@ exampleNick2
         soundsVolume = byId('soundsVolume');
         mainCanvas.focus();
         let bgColorInput = byId('bgColor');
-        let cellMinPoints = byId('cellMin');
-        let cellMaxPoints = byId('cellMax');
-        let virusNumPoints = byId('virusNum');
+        let cellMinPoints = byId('cellMinPoints');
+        let cellMaxPoints = byId('cellMaxPoints');
+        let virusNumPoints = byId('virusNumPoints');
 
         loadSettings();
         window.addEventListener('beforeunload', storeSettings);
@@ -1831,9 +1831,9 @@ exampleNick2
         
         byId('play-btn').addEventListener('click', () => {
             settings.bgColor = bgColorInput.value
-            settings.virusNum = virusNumPoints
-            settings.cellMin = cellMinPoints
-            settings.cellMax = cellMaxPoints
+            settings.virusNum = virusNumPoints.value
+            settings.cellMin = cellMinPoints.value
+            settings.cellMax = cellMaxPoints.value
             
             const accessCode = document.getElementById('accessCode').value;
 
