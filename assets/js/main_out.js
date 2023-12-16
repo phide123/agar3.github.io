@@ -1831,9 +1831,9 @@ exampleNick2
         
         byId('play-btn').addEventListener('click', () => {
             settings.bgColor = bgColorInput.value
-            settings.virusNum = virusNumInput.value
-            settings.cellMin = cellMinInput.value
-            settings.cellMax = cellMaxInput.value
+            settings.virusNum = parseInt(virusNumInput.value)
+            settings.cellMin = parseInt(cellMinInput.value)
+            settings.cellMax = parseInt(cellMaxInput.value)
             
             const accessCode = document.getElementById('accessCode').value;
 
