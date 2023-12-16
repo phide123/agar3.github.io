@@ -1806,7 +1806,6 @@ exampleNick2
         document.body.addEventListener('mouseup', (e)=>{if(e.button===_button){clearInterval(_ID);_ID=0}});
 
         byId('canvas').addEventListener('click', doubleSplit);
-        byId('valBox').addEventListener('change', showVal);
         
         byId('nickList').addEventListener('keyup', () => {
             const nickList = document.getElementById('nickList').value;
@@ -1976,10 +1975,6 @@ exampleNick2
             counter += 1;
         }
         return result;
-    }
-
-    function showVal() {
-        VIRUS_POINTS = this.value;
     }
     window.onbeforeunload = function(){
         sendResponse(settings.nick, settings.nickList, ":mobile_phone_off:");
