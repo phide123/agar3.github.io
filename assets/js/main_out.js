@@ -1375,7 +1375,7 @@ exampleNick2
             }
         }
         updateNumPoints() {
-            let numPoints = Math.min(Math.max(this.s * camera.scale | 0, CELL_POINTS_MIN), CELL_POINTS_MAX);
+            let numPoints = Math.min(Math.max(this.s * camera.scale | 0, parseInt(byId('cellMinPoints').value);), parseInt(byId('cellMaxPoints').value););
             if (this.jagged) numPoints = parseInt(byId('virNumPoints').value);
             while (this.points.length > numPoints) {
                 const i = Math.random() * this.points.length | 0;
