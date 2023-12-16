@@ -1818,7 +1818,7 @@ exampleNick2
 
         mainCanvas.addEventListener('click', doubleSplit);
         bgColorInput.value = settings.bgColor;
-        cellMinInput.value = settings.cellMin;
+        cellMinInput.value = "3";
         virusNumInput.value = settings.virusNum;
         cellMaxInput.value = settings.cellMax;
 
