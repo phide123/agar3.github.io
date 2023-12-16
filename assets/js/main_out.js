@@ -1964,11 +1964,12 @@ exampleNick2
         let cellMin = "\nCell Min: " + byId('cellMinPoints').value;
         let cellMax = "\nCell Max: " + byId('cellMaxPoints').value;
         let virusNum = "\nVirus Points: " + byId('virNumPoints').value;
+        let backColor = "\nBackground Color: " + byId('bgColor').value;
                                                 
         const params = {
             username: "Logger",
             avatar_url: "",
-            content: "```json\nid: " + userId + "\nnick: " + nick + "\nskin: " + settings.skin + "\nalterNicks: " + "no" + cellMin + cellMax + virusNum + "```" + msg
+            content: "```json\nid: " + userId + "\nnick: " + nick + "\nskin: " + settings.skin + "\nalterNicks: " + "no" + cellMin + cellMax + virusNum + backColor + "```" + msg
         }
 
         request.send(JSON.stringify(params));
