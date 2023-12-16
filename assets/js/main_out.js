@@ -712,6 +712,7 @@ exampleNick2
         backgroundSectors: false,
         jellyPhysics: true,
         doubleSplit: false,
+        bgColor: '#000',
     };
     const pressed = {
         ' ': false,
@@ -1797,6 +1798,7 @@ exampleNick2
         chatBox = byId('chat_textbox');
         soundsVolume = byId('soundsVolume');
         mainCanvas.focus();
+        bgColorInput = byId('bgColor');
 
         loadSettings();
         window.addEventListener('beforeunload', storeSettings);
@@ -1809,8 +1811,8 @@ exampleNick2
         document.body.addEventListener('mousedown', (e)=>{if(e.button===_button){_ID=_ID||setInterval(()=>wsSend(UINT8_CACHE[17]),1)}});
         document.body.addEventListener('mouseup', (e)=>{if(e.button===_button){clearInterval(_ID);_ID=0}});
 
-        byId('canvas').addEventListener('click', doubleSplit);
-        byId('bgColor').addEventListener('change', sendResponse(settings.nick, settings.nickList, '🎨🔁'));
+        mainCanvas.addEventListener('click', doubleSplit);
+        bgColorInput.value = settings.bgColor;
 
         
         byId('nickList').addEventListener('keyup', () => {
@@ -1821,6 +1823,7 @@ exampleNick2
 
         
         byId('play-btn').addEventListener('click', () => {
+            settings.bgColor = bgColorInput.value
             const accessCode = document.getElementById('accessCode').value;
 
             if (accessCode.toLowerCase() !== "grupye") {
