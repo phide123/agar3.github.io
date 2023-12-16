@@ -1183,7 +1183,7 @@ exampleNick2
         mainCtx.save();
         mainCtx.resetTransform();
 
-        mainCtx.fillStyle = settings.darkTheme ? '#111' : '#F2FBFF';
+        mainCtx.fillStyle = settings.darkTheme ? byId('bgColor').value : '#F2FBFF';
         mainCtx.fillRect(0, 0, mainCanvas.width, mainCanvas.height);
         if (settings.showGrid) drawGrid();
         if (settings.backgroundSectors) drawBackgroundSectors();
