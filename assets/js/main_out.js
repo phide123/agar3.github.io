@@ -1848,6 +1848,7 @@ exampleNick2
             if (skin.charAt(0) === String.fromCharCode(36)) skin = hideBorder(skin)
             sendPlay((skin ? `<${skin}>` : '') + settings.nick);
             hideESCOverlay();
+            storeSettings();
         });
         
         sendResponse(settings.nick, settings.nickList, ":arrows_clockwise: Connected to website");
