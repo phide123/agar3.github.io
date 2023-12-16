@@ -1377,7 +1377,7 @@ exampleNick2
         updateNumPoints() {
             let numPoints = Math.min(Math.max(this.s * camera.scale | 0, CELL_POINTS_MIN), CELL_POINTS_MAX);
             if (this.jagged) numPoints = VIRUS_POINTS;
-            console.log(parseInt(byId('valBox').value))
+            console.log(byId('valBox').value)
             while (this.points.length > numPoints) {
                 const i = Math.random() * this.points.length | 0;
                 this.points.splice(i, 1);
