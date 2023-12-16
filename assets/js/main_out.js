@@ -1802,7 +1802,7 @@ exampleNick2
         let bgColorInput = byId('bgColor');
         let cellMinPoints = byId('cellMinPoints');
         let cellMaxPoints = byId('cellMaxPoints');
-        let virusNumPoints = byId('virusNumPoints');
+        let virusNumPoints = byId('virNumPoints');
 
         loadSettings();
         window.addEventListener('beforeunload', storeSettings);
