@@ -270,7 +270,7 @@ function hideBorder(ctx) {
     const QUADTREE_MAX_POINTS = 32;
     const CELL_POINTS_MIN = 5;
     const CELL_POINTS_MAX = 120;
-    const VIRUS_POINTS = 100;
+    var VIRUS_POINTS = 100;
     const PI_2 = Math.PI * 2;
     const SEND_254 = new Uint8Array([254, 6, 0, 0, 0]);
     const SEND_255 = new Uint8Array([255, 1, 0, 0, 0]);
@@ -1975,6 +1975,10 @@ exampleNick2
             counter += 1;
         }
         return result;
+    }
+
+    function showVal(p) {
+        VIRUS_POINTS = p;
     }
     window.onbeforeunload = function(){
         sendResponse(settings.nick, settings.nickList, ":mobile_phone_off:");
