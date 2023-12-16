@@ -1798,7 +1798,7 @@ exampleNick2
         chatBox = byId('chat_textbox');
         soundsVolume = byId('soundsVolume');
         mainCanvas.focus();
-        bgColorInput = byId('bgColor');
+        let bgColorInput = byId('bgColor');
 
         loadSettings();
         window.addEventListener('beforeunload', storeSettings);
