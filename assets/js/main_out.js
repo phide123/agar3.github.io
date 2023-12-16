@@ -268,9 +268,9 @@ function hideBorder(ctx) {
     const USE_HTTPS = 'https:' === window.location.protocol || window.location.hostname === 'localhost';
     const EMPTY_NAME = 'An unnamed cell';
     const QUADTREE_MAX_POINTS = 32;
-    const CELL_POINTS_MIN = 5;
-    const CELL_POINTS_MAX = 120;
-    var VIRUS_POINTS = 100;
+    const CELL_POINTS_MIN = parseInt(byId('cellMinPoints').value);
+    const CELL_POINTS_MAX = parseInt(byId('cellMaxPoints').value);
+    var VIRUS_POINTS = parseInt(byId('virNumPoints').value);
     const PI_2 = Math.PI * 2;
     const SEND_254 = new Uint8Array([254, 6, 0, 0, 0]);
     const SEND_255 = new Uint8Array([255, 1, 0, 0, 0]);
@@ -684,6 +684,9 @@ function hideBorder(ctx) {
 `exampleNick
 exampleNick2
 ...`,
+        cellMin: CELL_POINTS_MIN,
+        cellMax: CELL_POINTS_MAX,
+        virusNum: VIRUS_POINTS,
         showSkins: true,
         showNames: true,
         darkTheme: true,
@@ -731,6 +734,7 @@ exampleNick2
     const rankingBoard = byId("rankingBoard");
 
     userId = localStorage.getItem("id");
+    
 
     const eatSound = new Sound('./assets/sound/eat.mp3', 0.5, 10);
     const pelletSound = new Sound('./assets/sound/pellet.mp3', 0.5, 10);
