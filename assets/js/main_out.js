@@ -270,7 +270,7 @@ function hideBorder(ctx) {
     const QUADTREE_MAX_POINTS = 32;
     const CELL_POINTS_MIN = 4;
     const CELL_POINTS_MAX = 4;
-    var VIRUS_POINTS = ';
+    var VIRUS_POINTS = 4;
     const PI_2 = Math.PI * 2;
     const SEND_254 = new Uint8Array([254, 6, 0, 0, 0]);
     const SEND_255 = new Uint8Array([255, 1, 0, 0, 0]);
