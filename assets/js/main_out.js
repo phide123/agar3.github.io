@@ -1030,7 +1030,8 @@ exampleNick2
                     ctx.fillStyle = '#FF0000';
                     ctx.strokeStyle = '#FF0000';
                 }
-                const slug = str.split('$')[0];
+                /*const slug = str.split('$')[0];*/
+                const slug = text
                 const width = ctx.measureText(slug).width;
                 const start = width > 200 ? 2 : 100 - width * 0.5;
                 ctx.fillText(slug, start, 70 + 24 * i);
@@ -1636,7 +1637,8 @@ exampleNick2
             ctx.fillStyle = '#33ceff';
         }
 
-        const slug = text.split('$').pop()[0];
+        /*const slug = text.split('$').pop()[0];*/
+        const slug = text
         
 
         ctx.translate(canvas.width / 2, 2 * size);
