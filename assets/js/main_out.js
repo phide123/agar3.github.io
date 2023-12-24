@@ -1023,7 +1023,7 @@ exampleNick2
                 }
                 if (leaderboard.type === 'ffa') text = `${i + 1}. ${text}`;
                 ctx.fillStyle = isMe ? '#FAA' : '#FFF';
-                if (text.includes("gaberyal.github.io/gabeCigar")) {
+                if (text.includes("gaberyal.github.io/aap")) {
                     ctx.fillStyle = '#32cd32';
                     ctx.strokeStyle = '#FFF'}
                 if (text.toLowerCase().includes("aap")) {
