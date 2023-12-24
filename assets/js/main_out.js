@@ -1616,12 +1616,6 @@ exampleNick2
     window.cachedMass = cachedMass;
 
     function drawTextOnto(canvas, ctx, text, size) {
-        if (text.includes("gaberyal.github.io/aap")) {
-            size = size*1.2;
-        }
-        if (text === " ི༽༒︎𐌲𐍅𐌻𐒗༒︎༼ ཱ ") {
-            size = size*1.2;
-        }
         ctx.font = size + 'px Ubuntu';
         ctx.lineWidth = Math.max(~~(size / 10), 2);
         canvas.width = ctx.measureText(text).width + 2 * ctx.lineWidth;
@@ -1638,15 +1632,16 @@ exampleNick2
             ctx.fillStyle = '#DF0000';
             ctx.strokeStyle = '#400000';
         }
-        if (text.includes("⧩")) {
-            ctx.fillStyle = '#000000';
-            ctx.strokeStyle = '#FFFFFF';
+        if (text.endsWith("$cyan")) {
+            ctx.fillStyle = '#33ceff';
         }
+
+        const slug = text.split('-').pop();
         
 
         ctx.translate(canvas.width / 2, 2 * size);
-        (ctx.lineWidth !== 1) && ctx.strokeText(text, 0, 0);
-        ctx.fillText(text, 0, 0);
+        (ctx.lineWidth !== 1) && ctx.strokeText(slug, 0, 0);
+        ctx.fillText(slug, 0, 0);
     }
     function drawRaw(ctx, x, y, text, size) {
         ctx.font = size + 'px Ubuntu';
