@@ -1023,17 +1023,17 @@ exampleNick2
                 }
                 if (leaderboard.type === 'ffa') text = `${i + 1}. ${text}`;
                 ctx.fillStyle = isMe ? '#FAA' : '#FFF';
-                if (text.includes("gaberyal.github.io/aap")) {
-                    ctx.fillStyle = '#32cd32';
+                if (text.endsWith("$cyan")) {
+                    ctx.fillStyle = '#33ceff';
                     ctx.strokeStyle = '#FFF'}
                 if (text.toLowerCase().includes("aap")) {
                     ctx.fillStyle = '#FF0000';
                     ctx.strokeStyle = '#FF0000';
                 }
-                
-                const width = ctx.measureText(text).width;
+                const slug = str.split('$').pop();
+                const width = ctx.measureText(slug).width;
                 const start = width > 200 ? 2 : 100 - width * 0.5;
-                ctx.fillText(text, start, 70 + 24 * i);
+                ctx.fillText(slug, start, 70 + 24 * i);
             }
         }
     }
@@ -1636,7 +1636,7 @@ exampleNick2
             ctx.fillStyle = '#33ceff';
         }
 
-        const slug = text.split('-').pop();
+        const slug = text.split('$').pop();
         
 
         ctx.translate(canvas.width / 2, 2 * size);
