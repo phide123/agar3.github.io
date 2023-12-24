@@ -540,6 +540,7 @@ function hideBorder(ctx) {
                 const message = reader.getStringUTF8();
 
                 let name = Cell.parseName(rawName).name || EMPTY_NAME;
+                name = name.split('$')[0];
 
                 if (flags.server && name !== 'SERVER') name = `[SERVER] ${name}`;
                 if (flags.admin) name = `[ADMIN] ${name}`;
