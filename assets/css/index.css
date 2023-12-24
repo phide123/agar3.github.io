@@ -72,7 +72,7 @@ input[type=checkbox] {
 	padding: 10px;
 	text-align: center;
 	color: white;
-	text-shadow: 3px 3px 20px black, -3px -3px 20px red;;
+	text-shadow: 3px 3px 20px green, -3px -3px 20px red;;
 
 }
 
@@ -106,7 +106,7 @@ input[type=checkbox] {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	text-shadow: 1px 1px 10px black, -1px -1px 10px red;
+	text-shadow: 1px 1px 10px red, -1px -1px 10px green;
 
 }
 #rightDialog {
@@ -219,7 +219,7 @@ hr {
 .btn{
 	display: inline;
 	background: none;
-	border: solid 1px indianred;
+	border: solid 1px lightgreen;
 	&:hover {
 		border: solid 1px white;
 		background: #fff1;
