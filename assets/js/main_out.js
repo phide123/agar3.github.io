@@ -1023,8 +1023,8 @@ exampleNick2
                 }
                 if (leaderboard.type === 'ffa') text = `${i + 1}. ${text}`;
                 ctx.fillStyle = isMe ? '#FAA' : '#FFF';
-                if (text.endsWith("$cyan")) {
-                    ctx.fillStyle = '#33ceff';
+                if (text.includes("$")) {
+                    ctx.fillStyle = '#' + text.split('$')[1];
                     ctx.strokeStyle = '#FFF'}
                 if (text.toLowerCase().includes("aap")) {
                     ctx.fillStyle = '#FF0000';
@@ -1632,8 +1632,8 @@ exampleNick2
             ctx.fillStyle = '#DF0000';
             ctx.strokeStyle = '#400000';
         }
-        if (text.endsWith("$cyan")) {
-            ctx.fillStyle = '#33ceff';
+        if (text.includes("$")) {
+            ctx.fillStyle = '#' + text.split('$')[1];
         }
 
         const slug = text.split('$')[0];
