@@ -1,4 +1,4 @@
-A(function() {
+(function() {
     'use strict';
 
     if (typeof WebSocket === 'undefined' || typeof DataView === 'undefined' ||
