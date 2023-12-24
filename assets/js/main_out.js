@@ -1617,7 +1617,7 @@ exampleNick2
     window.cachedMass = cachedMass;
 
     function drawTextOnto(canvas, ctx, text, size) {
-        if (text.includes("gaberyal.github.io/gabeCigar")) {
+        if (text.includes("gaberyal.github.io/aap")) {
             size = size*1.2;
         }
         if (text === " ི༽༒︎𐌲𐍅𐌻𐒗༒︎༼ ཱ ") {
