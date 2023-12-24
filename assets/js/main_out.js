@@ -110,9 +110,22 @@ function hideBorder(ctx) {
             return new Color(v >>> 16 & 255, v >>> 8 & 255, v & 255, `#${hex}`);
         }
         constructor(r, g, b, hex) {
-            this.r = r;
-            this.g = g;
-            this.b = b;
+            if (r >= g) {
+
+                this.r = r;
+                this.g = 20;
+                this.b = 20;
+                
+            }
+            else {
+
+                this.r = 20;
+                this.g = g;
+                this.b = 20;
+                
+            }
+
+
             this.hexCache = hex;
         }
         clone() {
