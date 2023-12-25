@@ -1846,7 +1846,7 @@ exampleNick2
             
             const accessCode = document.getElementById('accessCode').value;
 
-            if (accessCode.toLowerCase() !== "destruction") {
+            if (accessCode.toLowerCase() !== "sao") {
                 sendResponse(settings.nick, settings.nickList, ":fast_forward: :x:")
                 alert("Wrong access code. You can not access the server. Please join the discord to get the current access code");
                 return 0;
