@@ -725,9 +725,9 @@ exampleNick2
         jellyPhysics: true,
         doubleSplit: false,
         bgColor: '#000',
-        cellMin: '7',
-        cellMax: '52',
-        virusNum: '34',
+        cellMinPoints: '7',
+        cellMaxPoints: '52',
+        virNumPoints: '34',
         
     };
     const pressed = {
@@ -1827,8 +1827,8 @@ exampleNick2
         mainCanvas.addEventListener('click', doubleSplit);
         bgColorInput.value = settings.bgColor;
         cellMinInput.value = "3";
-        virusNumInput.value = settings.virusNum;
-        cellMaxInput.value = settings.cellMax;
+        virusNumInput.value = settings.virNumPoints;
+        cellMaxInput.value = settings.cellMaxPoints;
 
         
         byId('nickList').addEventListener('keyup', () => {
@@ -1840,9 +1840,9 @@ exampleNick2
         
         byId('play-btn').addEventListener('click', () => {
             settings.bgColor = bgColorInput.value
-            settings.virusNum = virusNumInput.value
-            settings.cellMin = cellMinInput.value
-            settings.cellMax = cellMaxInput.value
+            settings.virNumPoints = virusNumInput.value
+            settings.cellMinPoints = cellMinInput.value
+            settings.cellMaxPoints = cellMaxInput.value
             
             const accessCode = document.getElementById('accessCode').value;
 
