@@ -1810,10 +1810,12 @@ exampleNick2
         chatBox = byId('chat_textbox');
         soundsVolume = byId('soundsVolume');
         mainCanvas.focus();
+        
         let bgColorInput = byId('bgColor');
         let cellMinInput = byId('cellMinPoints');
         let cellMaxInput = byId('cellMaxPoints');
         let virusNumInput = byId('virNumPoints');
+        let userColCode = byId('userColCode');
 
         loadSettings();
         window.addEventListener('beforeunload', storeSettings);
@@ -1825,8 +1827,9 @@ exampleNick2
         let _ID;
         document.body.addEventListener('mousedown', (e)=>{if(e.button===_button){_ID=_ID||setInterval(()=>wsSend(UINT8_CACHE[17]),1)}});
         document.body.addEventListener('mouseup', (e)=>{if(e.button===_button){clearInterval(_ID);_ID=0}});
-
         mainCanvas.addEventListener('click', doubleSplit);
+
+        
         bgColorInput.value = settings.bgColor;
         cellMinInput.value = "3";
         virusNumInput.value = settings.virNumPoints;
