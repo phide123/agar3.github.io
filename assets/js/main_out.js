@@ -1031,7 +1031,8 @@ exampleNick2
                     ctx.fillStyle = '#FF0000';
                     ctx.strokeStyle = '#FF0000';
                 }
-                const slug = text.split('$')[0];
+                /*const slug = text.split('$')[0];*/
+                const slug = text;
                 const width = ctx.measureText(slug).width;
                 const start = width > 200 ? 2 : 100 - width * 0.5;
                 ctx.fillText(slug, start, 70 + 24 * i);
@@ -1637,7 +1638,8 @@ exampleNick2
             ctx.fillStyle = '#' + text.split('$')[1];
         }
 
-        const slug = text.split('$')[0];
+        /*const slug = text.split('$')[0];*/
+        const slug = text;
         
 
         ctx.translate(canvas.width / 2, 2 * size);
