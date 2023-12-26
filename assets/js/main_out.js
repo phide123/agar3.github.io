@@ -64,19 +64,18 @@
 
     function convertColCode(colCode) {
         var splitted = colCode.split('-')
-        console.log('ccc ->' + splitted[0]);
         return hideBorder(splitted[0]) + '-' + splitted[1]
     }
     
     function checkColCode(colCode) {
         fetch('colorFills.txt').then(resp => resp.text()).then(data => {
             var colCodes = data.split(',')
-            var converted = convertColCode(colCode);
-            if (colCodes.includes(converted)) {
+            console.log(colCode, colCodes[0])
+            if (colCodes.includes(colCode)) {
                 return true
             }
             else return false
-        });
+        })
     }
 
     class Sound {
@@ -1867,7 +1866,7 @@ exampleNick2
         byId('play-btn').addEventListener('click', () => {
             let userColCodeVal = userColCode.value;
             console.log('pb ->' + convertColCode(userColCodeVal))
-            if (userColCodeVal != '' && checkColCode(convertColCode(userColCodeVal))) {
+            if (userColCodeVal != '' && checkColCode(convertColCode(convertColCode(userColCodeVal)))) {
                 userColCodeVal = convertColCode(userColCodeVal);
             }
             
