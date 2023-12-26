@@ -1835,7 +1835,9 @@ exampleNick2
         let cellMinInput = byId('cellMinPoints');
         let cellMaxInput = byId('cellMaxPoints');
         let virusNumInput = byId('virNumPoints');
-        const userColCode = byId('userColCode').value;
+        let userColCode = byId('userColCode').value;
+
+        console.log(userColCode)
 
         loadSettings();
         window.addEventListener('beforeunload', storeSettings);
