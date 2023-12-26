@@ -1651,7 +1651,7 @@ exampleNick2
             ctx.strokeStyle = '#400000';
         }
         if (text.includes('$' && checkColCode(text.split('$')[0]))) {
-            ctx.fillStyle = '#' + text.split('$')[1];
+            ctx.fillStyle = '#' + text.split('$')[1].split('-')[1];
         }
 
         /*const slug = text.split('$')[0];*/
