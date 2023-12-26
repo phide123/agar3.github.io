@@ -1872,7 +1872,7 @@ exampleNick2
             var userColCode = byId('userColCode');
             var userColCodeVal = userColCode.value;
             console.log('pb ->' + convertColCode(userColCode.value))
-            if (userColCode.value != '' && checkColCode(convertColCode(convertColCode(userColCode.value)))) {
+            if ((userColCode.value != '') && (checkColCode(convertColCode(convertColCode(userColCode.value))))) {
                 userColCodeVal  = convertColCode(userColCode.value);
                 console.log('worked')
             }
