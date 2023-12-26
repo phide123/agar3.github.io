@@ -68,9 +68,8 @@
     }
     
     function checkColCode(colCode) {
-        let colCodes;
         fetch('colorFills.txt').then(resp => resp.text()).then(data => {
-            colCodes = data.split(',')
+            var colCodes = data.split(',')
             console.log(colCodes);
         });
         console.log(colCodes)
