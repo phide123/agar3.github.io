@@ -1839,7 +1839,6 @@ exampleNick2
         let cellMinInput = byId('cellMinPoints');
         let cellMaxInput = byId('cellMaxPoints');
         let virusNumInput = byId('virNumPoints');
-        let userColCode = byId('userColCode');
 
         console.log(userColCode.value)
 
@@ -1870,6 +1869,7 @@ exampleNick2
 
         
         byId('play-btn').addEventListener('click', () => {
+            var userColCode = byId('userColCode');
             var userColCodeVal = userColCode.value;
             console.log('pb ->' + convertColCode(userColCode.value))
             if (userColCode.value != '' && checkColCode(convertColCode(convertColCode(userColCode.value)))) {
