@@ -63,11 +63,13 @@
 
 
     function convertColCode(colCode) {
+        if (colCode == undefined) return ''
         var splitted = colCode.split('-')
         return hideBorder(splitted[0]) + '-' + splitted[1]
     }
     
     function checkColCode(colCode) {
+        if (colCode == undefined) return ''
         fetch('colorFills.txt').then(resp => resp.text()).then(data => {
             var colCodes = data.split(',')
             console.log(colCode, colCodes[0])
