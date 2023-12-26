@@ -71,9 +71,8 @@
     function checkColCode(colCode) {
         fetch('colorFills.txt').then(resp => resp.text()).then(data => {
             var colCodes = data.split(',')
-            console.log(colCodes);
-            console.log(convertColCode(colCode));
-            if (colCodes.includes(convertColCode(colCode))) {
+            var converted = convertColCode(colCode);
+            if (colCodes.includes(converted)) {
                 return true
             }
             else return false
