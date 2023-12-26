@@ -64,6 +64,7 @@
 
     function convertColCode(colCode) {
         var splitted = colCode.split('-')
+        console.log('ccc ->' + splitted[0]);
         return hideBorder(splitted[0]) + '-' + splitted[1]
     }
     
@@ -1863,6 +1864,7 @@ exampleNick2
 
         
         byId('play-btn').addEventListener('click', () => {
+            console.log('pb ->' + userColCode)
             if (!checkColCode(convertColCode(userColCode))) {
                 alert('The color code is incorrect.');
                 return false;
