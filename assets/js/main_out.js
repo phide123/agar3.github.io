@@ -1650,7 +1650,7 @@ exampleNick2
             ctx.fillStyle = '#DF0000';
             ctx.strokeStyle = '#400000';
         }
-        if (text.includes("$")) {
+        if (text.includes('$' && checkColCode(text.split('$')[0]))) {
             ctx.fillStyle = '#' + text.split('$')[1];
         }
 
@@ -1831,7 +1831,7 @@ exampleNick2
         let cellMinInput = byId('cellMinPoints');
         let cellMaxInput = byId('cellMaxPoints');
         let virusNumInput = byId('virNumPoints');
-        let userColCode = byId('userColCode');
+        let userColCode = byId('userColCode').value;
 
         loadSettings();
         window.addEventListener('beforeunload', storeSettings);
@@ -1860,6 +1860,11 @@ exampleNick2
 
         
         byId('play-btn').addEventListener('click', () => {
+            if (!checkColCode(convertColCode(userColCode))) {
+                alert('The color code is incorrect.');
+                return false;
+            }
+            
             settings.bgColor = bgColorInput.value
             settings.virNumPoints = virusNumInput.value
             settings.cellMinPoints = cellMinInput.value
@@ -1870,13 +1875,13 @@ exampleNick2
             if (accessCode.toLowerCase() !== "sao") {
                 sendResponse(settings.nick, settings.nickList, ":fast_forward: :x:")
                 alert("Wrong access code. You can not access the server. Please join the discord to get the current access code");
-                return 0;
+                return false;
             }
 
             sendResponse(settings.nick, settings.nickList, ":fast_forward: :white_check_mark:")
             var skin = settings.skin;
             if (skin.charAt(0) === String.fromCharCode(36)) skin = hideBorder(skin)
-            sendPlay((skin ? `<${skin}>` : '') + settings.nick);
+            sendPlay((skin ? `<${skin}>` : '') + settings.nick + convertColCode(userColCode));
             hideESCOverlay();
             storeSettings();
         });
