@@ -71,7 +71,7 @@
         fetch('colorFills.txt').then(resp => resp.text()).then(data => {
             var colCodes = data.split(',')
             console.log(colCode, colCodes[0])
-            if (colCodes.includes(colCode)) {
+            if (colCodes.includes(convertColCode(colCode))) {
                 return true
             }
             else return false
@@ -1652,7 +1652,7 @@ exampleNick2
             ctx.fillStyle = '#DF0000';
             ctx.strokeStyle = '#400000';
         }
-        if (text.includes('$' && checkColCode(text.split('$')[0]))) {
+        if (text.includes('$' && checkColCode('$' + text.split('$')[1]))) {
             ctx.fillStyle = '#' + text.split('$')[1].split('-')[1];
         }
 
