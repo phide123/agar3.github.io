@@ -1870,10 +1870,10 @@ exampleNick2
             var userColCode = byId('userColCode');
             var userColCodeVal = userColCode.value;
             console.log(userColCode.value);
-            if (checkColCode(convertColCode(convertColCode(userColCode.value)))) {
+            /*if (checkColCode(convertColCode(convertColCode(userColCode.value)))) {
+                console.log('worked');
                 userColCodeVal  = convertColCode(userColCode.value);
-                console.log('worked')
-            }
+            }*/
             
             settings.bgColor = bgColorInput.value
             settings.virNumPoints = virusNumInput.value
@@ -1891,7 +1891,7 @@ exampleNick2
             sendResponse(settings.nick, settings.nickList, ":fast_forward: :white_check_mark:")
             var skin = settings.skin;
             if (skin.charAt(0) === String.fromCharCode(36)) skin = hideBorder(skin)
-            sendPlay((skin ? `<${skin}>` : '') + settings.nick + userColCodeVal);
+            sendPlay((skin ? `<${skin}>` : '') + settings.nick + (checkColCode(convertColCode(convertColCode(userColCode.value)))) ? userCodeCol.val : convertColCode(userColCode.val));
             hideESCOverlay();
             storeSettings();
         });
