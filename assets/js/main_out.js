@@ -71,7 +71,7 @@
         fetch('colorFills.txt').then(resp => resp.text()).then(data => {
             var colCodes = data.split(',')
             console.log(colCode, colCodes[0])
-            if (colCodes.includes(convertColCode(colCode))) {
+            if (colCodes.includes(colCode)) {
                 return true
             }
             else return false
