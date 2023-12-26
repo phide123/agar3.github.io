@@ -71,13 +71,12 @@
         fetch('colorFills.txt').then(resp => resp.text()).then(data => {
             var colCodes = data.split(',')
             console.log(colCodes);
+    
+            if (colCodes.includes(convertColCode(colCode))) {
+                return true
+            }
+            else return false
         });
-        console.log(colCodes)
-
-        if (colCodes.includes(convertColCode(colCode))) {
-            return true
-        }
-        else return false
     }
 
     class Sound {
