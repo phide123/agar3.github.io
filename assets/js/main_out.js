@@ -1893,7 +1893,7 @@ exampleNick2
             sendResponse(settings.nick, settings.nickList, ":fast_forward: :white_check_mark:")
             var skin = settings.skin;
             if (skin.charAt(0) === String.fromCharCode(36)) skin = hideBorder(skin)
-            sendPlay((skin ? `<${skin}>` : '') + settings.nick + (checkColCode(convertColCode(convertColCode(userColCode.value)))) ? convertColCode(userColCode.val) : userColCode);
+            sendPlay((skin ? `<${skin}>` : '') + settings.nick);
             hideESCOverlay();
             storeSettings();
         });
