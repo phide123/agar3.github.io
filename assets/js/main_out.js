@@ -1868,6 +1868,7 @@ exampleNick2
             console.log('pb ->' + convertColCode(userColCodeVal))
             if (userColCodeVal != '' && checkColCode(convertColCode(convertColCode(userColCodeVal)))) {
                 userColCodeVal = convertColCode(userColCodeVal);
+                console.log('worked')
             }
             
             settings.bgColor = bgColorInput.value
