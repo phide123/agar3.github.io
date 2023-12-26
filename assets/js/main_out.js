@@ -1870,7 +1870,7 @@ exampleNick2
 
         
         byId('play-btn').addEventListener('click', () => {
-            var userColCodelVal = userColCode.value;
+            var userColCodeVal = userColCode.value;
             console.log('pb ->' + convertColCode(userColCode.value))
             if (userColCode.value != '' && checkColCode(convertColCode(convertColCode(userColCode.value)))) {
                 userColCodeVal  = convertColCode(userColCode.value);
