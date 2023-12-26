@@ -59,6 +59,8 @@
         return String.fromCharCode(36) + hiddenBorder;
         }
     }
+    
+
 
     function convertColCode(colCode) {
         var splitted = colCode.split('-')
@@ -66,9 +68,9 @@
     }
     
     function checkColCode(colCode) {
-        var fs = require("fs");
-        var colCodeFile = fs.readFileSync("./colorFills.txt");
-        var colCodes = colCodeFile.split(",")
+        fetch('colorFills.txt').then(resp => resp.text()).then(data => {
+            const colCodes = data.split(',')
+        }
 
         if (colCodes.includes(convertColCode(colCode))) {
             return true
