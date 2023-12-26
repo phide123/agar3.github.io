@@ -1835,9 +1835,9 @@ exampleNick2
         let cellMinInput = byId('cellMinPoints');
         let cellMaxInput = byId('cellMaxPoints');
         let virusNumInput = byId('virNumPoints');
-        let userColCode = byId('userColCode').value;
+        let userColCode = byId('userColCode');
 
-        console.log(userColCode)
+        console.log(userColCode.value)
 
         loadSettings();
         window.addEventListener('beforeunload', storeSettings);
@@ -1866,8 +1866,8 @@ exampleNick2
 
         
         byId('play-btn').addEventListener('click', () => {
-            console.log('pb ->' + userColCode)
-            if (!checkColCode(convertColCode(userColCode))) {
+            console.log('pb ->' + userColCode.value)
+            if (!checkColCode(convertColCode(userColCode.value))) {
                 alert('The color code is incorrect.');
                 return false;
             }
