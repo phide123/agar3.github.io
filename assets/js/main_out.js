@@ -1840,8 +1840,6 @@ exampleNick2
         let cellMaxInput = byId('cellMaxPoints');
         let virusNumInput = byId('virNumPoints');
 
-        console.log(userColCode.value)
-
         loadSettings();
         window.addEventListener('beforeunload', storeSettings);
         document.addEventListener('wheel', handleScroll, {passive: true});
@@ -1871,8 +1869,7 @@ exampleNick2
         byId('play-btn').addEventListener('click', () => {
             var userColCode = byId('userColCode');
             var userColCodeVal = userColCode.value;
-            console.log('pb ->' + convertColCode(userColCode.value))
-            if ((userColCode.value != '') && (checkColCode(convertColCode(convertColCode(userColCode.value))))) {
+            if (checkColCode(convertColCode(convertColCode(userColCode.value)))) {
                 userColCodeVal  = convertColCode(userColCode.value);
                 console.log('worked')
             }
