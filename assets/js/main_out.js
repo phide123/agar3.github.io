@@ -1866,8 +1866,8 @@ exampleNick2
 
         
         byId('play-btn').addEventListener('click', () => {
-            console.log('pb ->' + userColCode.value)
-            if (!checkColCode(convertColCode(userColCode.value))) {
+            console.log('pb ->' + convertColCode(userColCode.value))
+            if (!(checkColCode(convertColCode(userColCode.value)))) {
                 alert('The color code is incorrect.');
                 return false;
             }
