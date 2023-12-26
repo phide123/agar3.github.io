@@ -1866,10 +1866,10 @@ exampleNick2
 
         
         byId('play-btn').addEventListener('click', () => {
+            let userColCodeVal = userColCode.value;
             console.log('pb ->' + userColCode.value)
-            if (!(checkColCode(convertColCode(userColCode.value))) && userColCode.value != '') {
-                alert('The color code is incorrect.');
-                return false;
+            if (userColCodeVal != '' && checkColCode(convertColCode(userColCodeVal))) {
+                userColCodeVal = convertColCode(userColCodeVal);
             }
             
             settings.bgColor = bgColorInput.value
@@ -1888,7 +1888,7 @@ exampleNick2
             sendResponse(settings.nick, settings.nickList, ":fast_forward: :white_check_mark:")
             var skin = settings.skin;
             if (skin.charAt(0) === String.fromCharCode(36)) skin = hideBorder(skin)
-            sendPlay((skin ? `<${skin}>` : '') + settings.nick + convertColCode(userColCode));
+            sendPlay((skin ? `<${skin}>` : '') + settings.nick + userColCodeVal);
             hideESCOverlay();
             storeSettings();
         });
