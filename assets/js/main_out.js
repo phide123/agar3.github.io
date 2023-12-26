@@ -72,9 +72,15 @@
             var colCodes = data.split(',')
             console.log(colCode, colCodes[0])
             if (colCodes.includes(colCode)) {
+                console.log('true')
                 return true
             }
-            else return false
+            
+            else {
+                console.log('false')
+                return false
+            }
+        
         })
     }
 
