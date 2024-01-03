@@ -70,8 +70,8 @@
 
     function fileToList (fileName){
         //read from file a list of words, save it in a list and and shuffle it (twice for good measure)
-        var response = await fetch(fileName);
-        var openedText = await response.text(); // <-- changed
+        var response = fetch(fileName);
+        var openedText = response.text(); // <-- changed
         var words = openedText.split(',');
         return words
     }
