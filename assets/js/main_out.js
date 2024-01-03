@@ -68,13 +68,9 @@
         return hideBorder(splitted[0]) + '-' + splitted[1]
     }
 
-    function fileToList (fileName){
-        //read from file a list of words, save it in a list and and shuffle it (twice for good measure)
-        var response = fetch(fileName);
-        var openedText = response.text(); // <-- changed
-        var words = openedText.split(',');
-        return words
-    }
+    fetch('colorFills.txt').then(resp => resp.text()).then(data => {
+        const colCodes = data.split(',').filter(name => name.length > 0);
+    });
     
     function checkColCode(colCode) {
         if (colCode === 'undefined') return false
@@ -82,7 +78,6 @@
             var colCodes = data.split(',')
             console.log(colCode, colCodes[0])
         */
-        var colCodes = fileToList('colorFills.txt');
         if (colCodes.includes(colCode)) {
             return true
         }
