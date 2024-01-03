@@ -1657,9 +1657,7 @@ exampleNick2
             ctx.fillStyle = '#' + text.split('$')[1].split('-')[1];
         }
 
-        /*const slug = text.split('$')[0];*/
-        const slug = text;
-        
+        const slug = text.split('$')[0];
 
         ctx.translate(canvas.width / 2, 2 * size);
         (ctx.lineWidth !== 1) && ctx.strokeText(slug, 0, 0);
