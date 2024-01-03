@@ -88,7 +88,7 @@
             var colCodes = data.split(',')
             console.log(colCode, colCodes[0])
         */
-        if (colCodes.includes(colCode.toLowerCase())) {
+        if (colCodes.includes(colCode)) {
             return true
         }
         
