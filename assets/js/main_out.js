@@ -1049,15 +1049,14 @@ exampleNick2
                 }
                 if (leaderboard.type === 'ffa') text = `${i + 1}. ${text}`;
                 ctx.fillStyle = isMe ? '#FAA' : '#FFF';
-                if (text.includes("$")) {
-                    ctx.fillStyle = '#' + text.split('$')[1];
-                    ctx.strokeStyle = '#FFF'}
+                if (text.includes('$') && checkColCode(convertColCode('$' + text.split('$')[1]))) {
+                    ctx.fillStyle = '#' + text.split('$')[1].split('-')[1];
+                    ctx.strokeStyle = '#' + text.split('$')[1].split('-')[1];
                 if (text.toLowerCase().includes("aap")) {
                     ctx.fillStyle = '#FF0000';
                     ctx.strokeStyle = '#FF0000';
                 }
-                /*const slug = text.split('$')[0];*/
-                const slug = text;
+                const slug = text.split('$')[0];
                 const width = ctx.measureText(slug).width;
                 const start = width > 200 ? 2 : 100 - width * 0.5;
                 ctx.fillText(slug, start, 70 + 24 * i);
