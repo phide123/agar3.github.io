@@ -1052,6 +1052,7 @@ exampleNick2
                 if (text.includes('$') && checkColCode(convertColCode('$' + text.split('$')[1]))) {
                     ctx.fillStyle = '#' + text.split('$')[1].split('-')[1];
                     ctx.strokeStyle = '#' + text.split('$')[1].split('-')[1];
+                }
                 if (text.toLowerCase().includes("aap")) {
                     ctx.fillStyle = '#FF0000';
                     ctx.strokeStyle = '#FF0000';
