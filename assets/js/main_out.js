@@ -69,12 +69,11 @@
     }
     
     function checkColCode(colCode) {
-        if (colCode == undefined) return ''
+        if (colCode == undefined) return false
         fetch('colorFills.txt').then(resp => resp.text()).then(data => {
             var colCodes = data.split(',')
             console.log(colCode, colCodes[0])
             if (colCodes.includes(colCode)) {
-                console.log('true')
                 return true
             }
             
