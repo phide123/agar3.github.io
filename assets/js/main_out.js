@@ -1532,7 +1532,7 @@ exampleNick2
                 this.setColor(new Color(255, 255, 255));
             }
             if (this.skin === "berserkGriffith" || this.skin === "!FullBlack"|| this.skin === "!Tenebres") {
-                ctx.strokeStyle = '#448';
+                ctx.strokeStyle = '#2E3236';
                 ctx.fillStyle = '#000000';
                 this.setColor(new Color(0, 0, 0));
             }
