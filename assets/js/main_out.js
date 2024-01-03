@@ -67,22 +67,29 @@
         var splitted = colCode.split('-')
         return hideBorder(splitted[0]) + '-' + splitted[1]
     }
+
+    function fileToList (fileName){
+        //read from file a list of words, save it in a list and and shuffle it (twice for good measure)
+        var response = await fetch(fileName);
+        var openedText = await response.text(); // <-- changed
+        var words = openedText.split(',');
+        return words
+    }
     
     function checkColCode(colCode) {
         if (colCode === 'undefined') return false
-        fetch('colorFills.txt').then(resp => resp.text()).then(data => {
+        /*fetch('colorFills.txt').then(resp => resp.text()).then(data => {
             var colCodes = data.split(',')
             console.log(colCode, colCodes[0])
-            if (colCodes.includes(colCode)) {
-                return true
-            }
-            
-            else {
-                console.log('false')
-                return false
-            }
+        */
+        var colCodes = fileToList('colorFills.txt');
+        if (colCodes.includes(colCode)) {
+            return true
+        }
         
-        })
+        else {
+            return false
+        }
     }
 
     class Sound {
