@@ -68,11 +68,21 @@
         return hideBorder(splitted[0]) + '-' + splitted[1]
     }
 
-    fetch('colorFills.txt').then(resp => resp.text()).then(data => {
-        const colCodes = data.split(',').filter(name => name.length > 0);
+    const knownColorFills = new Map();
+    fetch('skinListLocal.txt').then(resp => resp.text()).then(data => {
+        const skins = data.split(',').filter(name => name.length > 0);
+        if (skins.length === 0) return;
+        byId('gallery-btn').style.display = 'inline-block';
+        const stamp = Date.now();
+        for (const skin of skins) knownColorFills.set(skin, stamp);
+        for (const i of knownColorFills.keys()) {
+            if (knownColorFills.get(i) !== stamp) knownColorFills.delete(i);
+        }
     });
     
+    
     function checkColCode(colCode) {
+        const colCodes = Array.from(knownColorFills.keys()).sort();
         if (colCode === 'undefined') return false
         /*fetch('colorFills.txt').then(resp => resp.text()).then(data => {
             var colCodes = data.split(',')
@@ -382,7 +392,7 @@
         if (data.build) ws.send(data.build());
         else ws.send(data);
     }
-
+const sortedSkinsLocal = Array.from(knownSkinsLocal.keys()).sort();
     function wsMessage(data) {
         syncUpdStamp = Date.now();
         const reader = new Reader(new DataView(data.data), 0, true);
