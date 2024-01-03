@@ -69,7 +69,7 @@
     }
 
     const knownColorFills = new Map();
-    fetch('skinListLocal.txt').then(resp => resp.text()).then(data => {
+    fetch('colorFills.txt').then(resp => resp.text()).then(data => {
         const skins = data.split(',').filter(name => name.length > 0);
         if (skins.length === 0) return;
         byId('gallery-btn').style.display = 'inline-block';
