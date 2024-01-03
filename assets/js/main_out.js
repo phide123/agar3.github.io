@@ -392,7 +392,7 @@
         if (data.build) ws.send(data.build());
         else ws.send(data);
     }
-const sortedSkinsLocal = Array.from(knownSkinsLocal.keys()).sort();
+    
     function wsMessage(data) {
         syncUpdStamp = Date.now();
         const reader = new Reader(new DataView(data.data), 0, true);
