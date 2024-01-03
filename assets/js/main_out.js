@@ -1853,10 +1853,11 @@ exampleNick2
             var userColCode = byId('userColCode');
             var userColCodeVal = userColCode.value;
             console.log(userColCode.value);
-            /*if (checkColCode(convertColCode(convertColCode(userColCode.value)))) {
+            console.log(checkColCode(convertColCode(convertColCode(userColCode.value))))
+            if (checkColCode(convertColCode(convertColCode(userColCode.value)))) {
                 console.log('worked');
                 userColCodeVal  = convertColCode(userColCode.value);
-            }*/
+            }
             
             settings.bgColor = bgColorInput.value
             settings.virNumPoints = virusNumInput.value
