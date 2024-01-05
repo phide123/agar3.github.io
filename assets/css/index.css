@@ -72,8 +72,6 @@ input[type=checkbox] {
 	padding: 10px;
 	text-align: center;
 	color: white;
-	text-shadow: 3px 3px 20px green, -3px -3px 20px red;;
-
 }
 
 #nick {
@@ -106,7 +104,6 @@ input[type=checkbox] {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	text-shadow: 1px 1px 10px red, -1px -1px 10px green;
 
 }
 #rightDialog {
@@ -149,7 +146,7 @@ iframe {
 }
 
 #nickList {
-	color: indianred;
+	color: grey;
 	border-radius: 14px;
 	background: #fff1;
 	margin-top: 10px;
@@ -219,7 +216,7 @@ hr {
 .btn{
 	display: inline;
 	background: none;
-	border: solid 1px lightgreen;
+	border: solid 1px grey;
 	&:hover {
 		border: solid 1px white;
 		background: #fff1;
