@@ -1861,7 +1861,7 @@ exampleNick2
         
         byId('play-btn').addEventListener('click', () => {
             var userColCode = byId('userColCode');
-            let userColCodeVal  = convertColCode(userColCode.value);
+            let userColCodeVal  = userColCode.value;
             console.log(checkColCode(convertColCode(convertColCode(userColCode.value))))
             /*if (checkColCode(convertColCode(convertColCode(userColCode.value)))) {
                 userColCodeVal  = convertColCode(userColCode.value);
@@ -1869,6 +1869,9 @@ exampleNick2
 
             if(userColCodeVal.startsWith('$')) {
                 userColCodeVal = convertColCode(userColCode.value);
+            }
+            else {
+                userColCodeVal = "";
             }
             
             settings.bgColor = bgColorInput.value
