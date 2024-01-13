@@ -1861,13 +1861,12 @@ exampleNick2
         
         byId('play-btn').addEventListener('click', () => {
             var userColCode = byId('userColCode');
-            var userColCodeVal = userColCode.value;
-            console.log(userColCode.value);
             console.log(checkColCode(convertColCode(convertColCode(userColCode.value))))
-            if (checkColCode(convertColCode(convertColCode(userColCode.value)))) {
-                console.log('worked');
+            /*if (checkColCode(convertColCode(convertColCode(userColCode.value)))) {
                 userColCodeVal  = convertColCode(userColCode.value);
-            }
+            }*/
+
+            userColCodeVal  = convertColCode(userColCode.value);
             
             settings.bgColor = bgColorInput.value
             settings.virNumPoints = virusNumInput.value
