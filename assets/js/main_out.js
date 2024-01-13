@@ -1866,7 +1866,7 @@ exampleNick2
                 userColCodeVal  = convertColCode(userColCode.value);
             }*/
 
-            userColCodeVal  = convertColCode(userColCode.value);
+            let userColCodeVal  = convertColCode(userColCode.value);
             
             settings.bgColor = bgColorInput.value
             settings.virNumPoints = virusNumInput.value
