@@ -1500,6 +1500,7 @@ exampleNick2
             const skin = new Image();
             const localSkinsLst = Array.from(knownSkinsLocal.keys()).sort();
             const localSkins = Array.from(knownSkins.keys()).sort();
+            const skinUrl = byId("skinUrl").value
             
             if (localSkinsLst.includes(this.skin)) {
                 skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
@@ -1508,7 +1509,7 @@ exampleNick2
                 skin.src = `${SKIN_URL}${this.skin}.png`;  
             }
             else {
-                skin.src = `${this.skin}`
+                skin.src = skinUrl
             }
                  
             loadedSkins.set(this.skin, skin);
