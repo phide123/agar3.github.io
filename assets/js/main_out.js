@@ -1499,12 +1499,16 @@ exampleNick2
             
             const skin = new Image();
             const localSkinsLst = Array.from(knownSkinsLocal.keys()).sort();
+            const localSkins = Array.from(knownSkins.keys()).sort();
             
             if (localSkinsLst.includes(this.skin)) {
                 skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
             }
-            else {
+            else if (localSkins.includes(this.skin)) {
                 skin.src = `${SKIN_URL}${this.skin}.png`;  
+            }
+            else {
+                skin.src = `${this.skin}`
             }
                  
             loadedSkins.set(this.skin, skin);
