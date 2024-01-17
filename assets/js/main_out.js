@@ -1492,15 +1492,16 @@ exampleNick2
             this.setSkin(skin);
         }
         setSkin(value) {
+            const skinUrl = byId("skinUrl").value
             this.skin = (value && value[0] === '$' ? hideBorder(value) : value) || this.skin;
-            if (this.skin === null /*|| !knownSkins.has(this.skin)*/ || loadedSkins.has(this.skin)) {
+            if (this.skin === null && skinUrl === '' /*|| !knownSkins.has(this.skin)*/ || loadedSkins.has(this.skin)) {
                 return;
             }
             
             const skin = new Image();
             const localSkinsLst = Array.from(knownSkinsLocal.keys()).sort();
             const localSkins = Array.from(knownSkins.keys()).sort();
-            const skinUrl = byId("skinUrl").value
+            
             
             if (localSkinsLst.includes(this.skin)) {
                 skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
