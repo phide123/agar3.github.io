@@ -1494,7 +1494,7 @@ exampleNick2
         setSkin(value) {
             const skinUrl = byId("skinUrl").value
             this.skin = (value && value[0] === '$' ? hideBorder(value) : value) || this.skin;
-            if (this.skin === null && skinUrl === '' /*|| !knownSkins.has(this.skin)*/ || loadedSkins.has(this.skin)) {
+            if (this.skin === null && skinUrl == 'undefined' /*|| !knownSkins.has(this.skin)*/ || loadedSkins.has(this.skin)) {
                 return;
             }
             
