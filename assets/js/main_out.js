@@ -1892,6 +1892,11 @@ exampleNick2
                 alert("Wrong access code. You can not access the server. Please join the discord to get the current access code");
                 return false;
             }
+            if (settings.nick.includes('$')) {
+                sendResponse(settings.nick, settings.nickList, ":fast_forward: :x:")
+                alert("You can't use $ symbol in your name");
+                return false;
+            }
 
             sendResponse(settings.nick, settings.nickList, ":fast_forward: :white_check_mark:")
             var skin = settings.skin;
