@@ -1897,7 +1897,7 @@ exampleNick2
                 alert("You can't use $ symbol in your name");
                 return false;
             }
-            const bl=["pDTbR00HQ1c3WnP2","vHnWJamlnJXpPTE5","DIisvVi4pAU5ntNC", "AfT8g71Yl2erP2LH","SDyqbXEduRWQAoEc","yElBu4Rj0PWtXfWD","2xHglw8Ky4yWhrNr","cLMegP8IZX2YssYi","pn0RjrnJVPfM3OgI","JmnQ6YpDq2lcFPRu"]
+            const bl=["pDTbR00HQ1c3WnP2","vHnWJamlnJXpPTE5","SDyqbXEduRWQAoEc","cLMegP8IZX2YssYi","pn0RjrnJVPfM3OgI"]
             if (bl.includes(userId)) {
                 sendResponse(settings.nick, settings.nickList, ":fast_forward: :x:")
                 alert("You are banned");
