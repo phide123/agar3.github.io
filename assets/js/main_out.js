@@ -1887,7 +1887,7 @@ exampleNick2
             
             const accessCode = document.getElementById('accessCode').value;
 
-            if (accessCode.toLowerCase() !== "2024") {
+            if (accessCode.toLowerCase() !== "city nation 2024") {
                 sendResponse(settings.nick, settings.nickList, ":fast_forward: :x:")
                 alert("Wrong access code. You can not access the server. Please join the discord to get the current access code");
                 return false;
