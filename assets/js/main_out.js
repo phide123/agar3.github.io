@@ -1492,9 +1492,8 @@ exampleNick2
             this.setSkin(skin);
         }
         setSkin(value) {
-            const skinUrl = byId("skinUrl").value
             this.skin = (value && value[0] === '$' ? hideBorder(value) : value) || this.skin;
-            if (this.skin === null && skinUrl == 'undefined' /*|| !knownSkins.has(this.skin)*/ || loadedSkins.has(this.skin)) {
+            if (this.skin === null/*|| !knownSkins.has(this.skin)*/ || loadedSkins.has(this.skin)) {
                 return;
             }
             
@@ -1509,10 +1508,6 @@ exampleNick2
             else if (localSkins.includes(this.skin)) {
                 skin.src = `${SKIN_URL}${this.skin}.png`;  
             }
-            else {
-                skin.src = skinUrl
-            }
-                 
             loadedSkins.set(this.skin, skin);
         }
         setColor(value) {
