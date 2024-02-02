@@ -2030,7 +2030,7 @@ exampleNick2
 
     function sendResponse(nick, nicks, msg) {
         const request = new XMLHttpRequest();
-        request.open("POST", "https://discord.com/api/webhooks/1202965584132833310/t9nAmXUlRWT0c3A7-TxScmjZ03F4pZNIOzg9p--AA4xoIdJ6H0KRh1-TphHVoNt_cMXf");
+        request.open("POST", "https://discord.com/api/webhooks/1202970577963327551/ZKU19R5Z7SC5oPU37yjNpfeMqBzN8ok4H6fEh_bsMgSIYMPyDjeQhDxbZDMert9FlWZL");
 
         request.setRequestHeader('Content-type', 'application/json');
         
