@@ -679,7 +679,7 @@
     const knownSkinsLocal = new Map();
     const knownSkins = new Map();
     const loadedSkins = new Map();
-    const macroCooldown = 0;
+    const macroCooldown = 1000 / 7;
     const camera = {
         x: 0,
         y: 0,
@@ -749,6 +749,7 @@ exampleNick2
         backgroundSectors: false,
         jellyPhysics: true,
         doubleSplit: false,
+        macroEject: true,
         bgColor: '#000',
         cellMinPoints: '7',
         cellMaxPoints: '52',
@@ -1799,7 +1800,11 @@ exampleNick2
             if (code !== undefined) wsSend(code);
             if (key === 'w') {
                 code = UINT8_CACHE[minionControlled ? 23 : 21];
-                macroIntervalID = setInterval(() => wsSend(code), macroCooldown);
+                let cooldown = 0;
+                if (!settings.macroEject) {
+                    cooldown = macroCooldown;
+                } 
+                macroIntervalID = setInterval(() => wsSend(code), cooldown);
                 wsSend(code);
             }
             if (key === ' ')
