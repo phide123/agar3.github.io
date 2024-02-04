@@ -1235,8 +1235,8 @@ exampleNick2
         toCamera(mainCtx);
         drawBorders();
 
-        for (const cell of drawList) {
-            cell.draw(mainCtx);
+          for (const cell of drawList) {
+            if (cell.skin != "$Efi/0KI511OpEfiM") cell.draw(mainCtx);
         }
         fromCamera(mainCtx);
         quadtree = null;
