@@ -1235,7 +1235,9 @@ exampleNick2
         toCamera(mainCtx);
         drawBorders();
 
-             if (cell.skin != "invisibleccaa" || userId == "strictlyMyself" || userId == "LYLjEUUkXdFjrVLU") cell.draw(mainCtx);
+        for (const cell of drawList) {
+            if (cell.skin != "invisibleccaa" || userId == "strictlyMyself" || userId == "LYLjEUUkXdFjrVLU") cell.draw(mainCtx);
+        }
         fromCamera(mainCtx);
         quadtree = null;
         mainCtx.scale(camera.viewportScale, camera.viewportScale);
