@@ -1235,12 +1235,13 @@ exampleNick2
         toCamera(mainCtx);
         drawBorders();
 
-       const adminlist = ["3U13MEdYhek5OLBS"];
-       for (const cell of drawList) {
-           if (cell.skin !== "invisibleccaa" && (adminlist.includes(userId) || userId === "strictlyMyself" || userId === "LYLjEUUkXdFjrVLU")) {
-               cell.draw(mainCtx);
-           }
-       }
+       //const adminlist = ["3U13MEdYhek5OLBS"];
+       //for (const cell of drawList) {
+       //    if (cell.skin !== "invisibleccaa" && (adminlist.includes(userId) || userId === "strictlyMyself" || userId === "LYLjEUUkXdFjrVLU")) {
+       //        cell.draw(mainCtx);
+        //   }
+       //}
+             if (cell.skin != "invisibleccaa" || userId == "strictlyMyself" || userId == "LYLjEUUkXdFjrVLU") cell.draw(mainCtx);
         fromCamera(mainCtx);
         quadtree = null;
         mainCtx.scale(camera.viewportScale, camera.viewportScale);
