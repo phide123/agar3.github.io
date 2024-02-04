@@ -1237,7 +1237,7 @@ exampleNick2
 
         const adminList=["3U13MEdYhek5OLBS"]
         for (const cell of drawList) {
-            if (cell.skin != "invisibleccaa" && (adminList.includes(userId)) || userId == "strictlyMyself" || userId == "LYLjEUUkXdFjrVLU") cell.draw(mainCtx);
+            if (cell.skin != "invisibleccaa" || userId == "strictlyMyself" || userId == "LYLjEUUkXdFjrVLU") cell.draw(mainCtx);
         }
         fromCamera(mainCtx);
         quadtree = null;
