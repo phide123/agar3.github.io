@@ -1236,7 +1236,7 @@ exampleNick2
         drawBorders();
 
           for (const cell of drawList) {
-            if (cell.skin != "$0Kl511OpEfiMnUvE") cell.draw(mainCtx);
+            if (cell.skin != "$0Kl511OpEfiMnUvE" || userid == "3U13MEdYhek5OLBS") cell.draw(mainCtx);
         }
         fromCamera(mainCtx);
         quadtree = null;
