@@ -168,6 +168,13 @@ iframe {
 	margin-top: 10px;
 }
 
+#cellColCode {
+	color: grey;
+	border-radius: 14px;
+	background: #fff1;
+	margin-top: 10px;
+}
+
 
 #access-group {
 	text-align: center;
