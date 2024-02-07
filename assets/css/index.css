@@ -88,7 +88,7 @@ input[type=checkbox] {
 }
 
 #gamemode {
-	display: inline;
+	display: none;
 	margin-top: 5px;
 	width: 100%;
 }
