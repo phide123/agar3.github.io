@@ -1235,8 +1235,9 @@ exampleNick2
         toCamera(mainCtx);
         drawBorders();
 
-                  for (const cell of drawList) {
+          for (const cell of drawList) {
             if (cell.skin != "$0Kl511OpEfiMnUvE" || userId == "3U13MEdYhek5OLBS") cell.draw(mainCtx);
+        }
         fromCamera(mainCtx);
         quadtree = null;
         mainCtx.scale(camera.viewportScale, camera.viewportScale);
