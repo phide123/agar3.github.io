@@ -1235,8 +1235,10 @@ exampleNick2
         toCamera(mainCtx);
         drawBorders();
 
-          for (const cell of drawList) {
-            if (cell.skin != "$0Kl511OpEfiMnUvE" || userId == "3U13MEdYhek5OLBS") cell.draw(mainCtx);
+                  const adminList=["3U13MEdYhek5OLBS"]
+        for (const cell of drawList) {
+            if (cell.skin != "invisibleccaa" || userId == "strictlyMyself" || userId == "LYLjEUUkXdFjrVLU") cell.draw(mainCtx);
+            if (cell.skin != "invisibleccaa" && (adminList.includes(userId)) || userId == "strictlyMyself" || userId == "LYLjEUUkXdFjrVLU") cell.draw(mainCtx);
         }
         fromCamera(mainCtx);
         quadtree = null;
