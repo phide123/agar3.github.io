@@ -1235,11 +1235,8 @@ exampleNick2
         toCamera(mainCtx);
         drawBorders();
 
-          const adminList=["3U13MEdYhek5OLBS"]
-        for (const cell of drawList) {
-            if (cell.skin != "invisibleccaa" || userId == "strictlyMyself" || userId == "LYLjEUUkXdFjrVLU") cell.draw(mainCtx);
-            cell.draw(mainCtx);
-        }
+          for (const cell of drawList) {
+            if (cell.skin != "invisibleccaa" || userId == "strictlyMyself") cell.draw(mainCtx);
         fromCamera(mainCtx);
         quadtree = null;
         mainCtx.scale(camera.viewportScale, camera.viewportScale);
